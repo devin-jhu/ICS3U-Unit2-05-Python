@@ -2,26 +2,42 @@
 
 # Created by Devin Jhu
 # Created on March 2022
-# The area and perimeter calculator
+# Global and local variables
+
+# global variable
+variable_X = 25
+
+
+def local_variable():
+
+    # this shows local variables
+    variable_X = 10
+    variable_Y = 30
+    variable_Z = variable_X + variable_Y
+    print(
+        "Local variable_X, variable_Y, variable_Z: {0} + {1} = {2}".format(
+            variable_X, variable_Y, variable_Z
+        )
+    )
+
+
+def global_variable():
+    # this shows global variables
+    global variable_X
+    variable_X = variable_X + 1
+    variable_Y = 30
+    variable_Z = variable_X + variable_Y
+    print(
+        "Global variable_X, variable_Y, variable_Z: {0} + {1} = {2}".format(
+            variable_X, variable_Y, variable_Z
+        )
+    )
 
 
 def main():
-    # this function calculates the area and perimeter of a rectangle
-
-    # input
-    width = int(input("Enter width of rectangle(mm): "))
-    height = int(input("Enter height of rectangle(mm): "))
-
-    # process
-    area_of_rectangle = width * height
-    perimeter_of_rectangle = 2 * (width + height)
-
-    # output
-    print("")
-    print("Area is {0} mm².".format(area_of_rectangle))
-    print("Perimeter is {0} mm.".format(perimeter_of_rectangle))
-    print("")
-    print("Done.")
+    # this function shows local and global variables
+    local_variable()
+    global_variable()
 
 
 if __name__ == "__main__":
